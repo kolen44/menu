@@ -1,0 +1,110 @@
+$primary-display: none;
+
+.rounded-div {
+  border-radius: 10px;
+  border-spacing: 4%;
+  padding: 20px;
+  color: #f2f2f2;
+  background-color: greenyellow;
+  height: 250px;
+  width: 250px;
+  .find-place-button{
+    background-color: blue;
+    color: white;
+    width: 100%;
+    border-radius: 12px;
+  }
+  .styled-input{
+    border-radius: 12px;
+    background-color: #3839;
+    color: #9382;
+  }
+  .dropdown-menu{
+    position: relative;
+    display: inline-block;
+    li{
+      display: inline-block;
+      :hover{
+        background-color: #f1f1f1;
+      }
+    }
+  }
+}
+
+.falseActive{
+  visibility: hidden;
+  transition: 0.3s;
+  width: 0;
+  height: 0;
+}
+
+.trueActive{
+  transition: 0.3s;
+  width: 100%;
+  height: 10%;
+  position: absolute; 
+  position: sticky;
+}
+
+
+.submenu-link {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border:1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    .submenu{
+      border-radius: 20px ;
+      background-color: blue;
+      padding: 2px;
+      border-color: black;
+      li{
+        width: 100%;
+      }
+    }
+}
+
+.switch{
+  display: inline-block;
+  position: relative;
+  height: 34px;
+  width: 60px;
+  .switch__input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  .switch__slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 34px;
+    border-color: #ccc;
+    transition: .4s;
+  }
+  .switch__slider::before{
+    content: '';
+    position: absolute;
+    cursor: pointer;
+    left: 4px;
+    bottom: 4px;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s;
+  }
+  .switch__input:checked + .switch__slider{
+    background-color: blue;
+  }
+  .switch__input:checked + .switch__slider::before{
+    transform: translateX(26px);
+  }
+
+}
